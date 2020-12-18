@@ -137,3 +137,8 @@ dev/StarterGame/Gem/Resources/GameSDK.ico
 dev/CloudGemDefectReportSample/Gem/Resources/GameSDK.ico
 dev/Gems/Blast/3rdParty/assimp/tools/shared/assimp_tools_icon.ico
 dev/ProjectTemplates/GemTemplate/game_project_gem_template/GameSDK.ico
+dev/UserSettings.xml
+dev/Editor/editoreventlog.xml
+dev/Editor/editorlayout.xml
+dev/MyProject/AWS/local-project-settings.json
+dev/SessionStatus/editor_statuses.json
