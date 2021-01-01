@@ -15,35 +15,26 @@
 #include <AzCore/Component/Component.h>
 
 #include <MyProject/MyProjectBus.h>
+#include <MyProject/MyInterface.h>
 
 namespace MyProject
 {
     class MyProjectSystemComponent
         : public AZ::Component
-        , protected MyProjectRequestBus::Handler
+        , public MyProjectRequestBus::Handler
+        , public AZ::Interface<MyInterface>::Registrar
     {
     public:
         AZ_COMPONENT(MyProjectSystemComponent, "{B27944BF-0E67-4551-ABBD-95C415A3A94F}");
 
         static void Reflect(AZ::ReflectContext* context);
 
-        static void GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided);
-        static void GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible);
-        static void GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required);
-        static void GetDependentServices(AZ::ComponentDescriptor::DependencyArrayType& dependent);
-
-    protected:
-        ////////////////////////////////////////////////////////////////////////
-        // MyProjectRequestBus interface implementation
-
-        ////////////////////////////////////////////////////////////////////////
-
-        ////////////////////////////////////////////////////////////////////////
         // AZ::Component interface implementation
-        void Init() override;
         void Activate() override;
         void Deactivate() override;
-        ////////////////////////////////////////////////////////////////////////
+
+        // MyInterface
+        const char* GetMyProjectName() override { return "MyProject"; }
     };
 
 } // namespace MyProject

@@ -3,6 +3,7 @@
     {
         "Include":
         [
+            "Include/MyProject/MyInterface.h",
             "Include/MyProject/MyProjectBus.h"
         ],
         "Source":

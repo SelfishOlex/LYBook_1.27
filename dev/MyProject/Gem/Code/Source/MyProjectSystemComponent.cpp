@@ -37,30 +37,6 @@ namespace MyProject
         }
     }
 
-    void MyProjectSystemComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
-    {
-        provided.push_back(AZ_CRC("MyProjectService"));
-    }
-
-    void MyProjectSystemComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
-    {
-        incompatible.push_back(AZ_CRC("MyProjectService"));
-    }
-
-    void MyProjectSystemComponent::GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required)
-    {
-        AZ_UNUSED(required);
-    }
-
-    void MyProjectSystemComponent::GetDependentServices(AZ::ComponentDescriptor::DependencyArrayType& dependent)
-    {
-        AZ_UNUSED(dependent);
-    }
-
-    void MyProjectSystemComponent::Init()
-    {
-    }
-
     void MyProjectSystemComponent::Activate()
     {
         MyProjectRequestBus::Handler::BusConnect();
